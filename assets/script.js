@@ -9,7 +9,7 @@ var textMovie = document.getElementById("movieInput");
 
 // API call function to retrieve TV show data
 function getTvShow(tvShow) {
-
+    // Actual TV Show data API call URL
     let tvRequestUrl = "https://api.tvmaze.com/singlesearch/shows?q=" + tvShow;
     fetch(tvRequestUrl)
     .then(function (response) {
@@ -22,8 +22,9 @@ function getTvShow(tvShow) {
 
 // API call function to retrieve Movie data
 function getMovie(movie) {
-
+    // Actual Movie data API call URL
     let movieRequestUrl = "https://api.watchmode.com/v1/search/?apiKey=" + keyMovie + "&search_field=name&search_value=" + movie;
+
     fetch(movieRequestUrl)
     .then(function (response) {
       var movieName = response
@@ -35,7 +36,7 @@ function getMovie(movie) {
 
 // Search for TV Show
 buttonTvElement.addEventListener("click", function() {
-    event.preventDefault()
+  event.preventDefault()
     var tvShow = inputTv.value;
     getTvShow(tvShow);
     console.log(tvShow);
@@ -43,7 +44,7 @@ buttonTvElement.addEventListener("click", function() {
 
 // Search for Movie
 buttonMovieElement.addEventListener("click", function() {
-    event.preventDefault()
+  event.preventDefault()
     var movie = inputMovie.value;
     getMovie(movie);
     console.log(movie);
