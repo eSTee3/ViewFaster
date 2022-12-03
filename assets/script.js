@@ -38,7 +38,7 @@ buttonTvElement.addEventListener("click", function() {
     event.preventDefault()
     var tvShow = inputTv.value;
     getTvShow(tvShow);
-    console.log(tvShow.data);
+    console.log(tvShow);
   });
 
 // Search for Movie
@@ -46,5 +46,5 @@ buttonMovieElement.addEventListener("click", function() {
     event.preventDefault()
     var movie = inputMovie.value;
     getMovie(movie);
-    console.log(movie.data);
+    console.log(movie);
   });
