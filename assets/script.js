@@ -1,6 +1,4 @@
-
-
-var keyTv = "8Y_bdZWnhU4JhXd6lZNrh5UD5jMGbBal";
+// List of Variables to use throughout the script
 var keyMovie = "kjG2rO76NTk8hjFjwsfFxxe205z2J4Fd2ZFn66nA";
 var inputTv = document.getElementById("tvInput");
 var buttonTvElement = document.getElementById("submitTv");
@@ -9,7 +7,8 @@ var inputMovie = document.getElementById("movieInput");
 var buttonMovieElement = document.getElementById("submitMovie");
 var textMovie = document.getElementById("movieInput");
 
-  function getTvShow(tvShow) {
+// API call function to retrieve TV show data
+function getTvShow(tvShow) {
 
     let tvRequestUrl = "https://api.tvmaze.com/singlesearch/shows?q=" + tvShow;
     fetch(tvRequestUrl)
@@ -21,7 +20,8 @@ var textMovie = document.getElementById("movieInput");
     });
   };
 
-  function getMovie(movie) {
+// API call function to retrieve Movie data
+function getMovie(movie) {
 
     let movieRequestUrl = "https://api.watchmode.com/v1/search/?apiKey=" + keyMovie + "&search_field=name&search_value=" + movie;
     fetch(movieRequestUrl)
@@ -33,14 +33,16 @@ var textMovie = document.getElementById("movieInput");
     });
   };
 
-  buttonTvElement.addEventListener("click", function() {
+// Search for TV Show
+buttonTvElement.addEventListener("click", function() {
     event.preventDefault()
     var tvShow = inputTv.value;
     getTvShow(tvShow);
     console.log(tvShow.data);
   });
 
-  buttonMovieElement.addEventListener("click", function() {
+// Search for Movie
+buttonMovieElement.addEventListener("click", function() {
     event.preventDefault()
     var movie = inputMovie.value;
     getMovie(movie);
