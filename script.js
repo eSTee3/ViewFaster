@@ -1,24 +1,33 @@
+
+
 var keyTv = "8Y_bdZWnhU4JhXd6lZNrh5UD5jMGbBal";
 var inputTv = document.getElementById('tvInput');
 var buttonTv = document.getElementById("submitTv");
 var textTv = document.getElementById('tvInput');
+var inputMovie = document.getElementById('movieInput');
+var buttonMovie = document.getElementById("submitMovie");
+var textMovie = document.getElementById('movieInput');
 
-function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://api.tvmaze.com/singlesearch/shows?q=the voice';
-  
+  function getTvShow(tvShow) {
+
+
+    let requestUrl = "https://api.tvmaze.com/singlesearch/shows?q=The_Voice";
     fetch(requestUrl)
       .then(function (response) {
-        return response.json();
+        var output = response
+        console.log(output);
       })
-      .then(function (data) {
-        console.log(data)
-      })
-};
-getApi()
+    };
 
-buttonTv.addEventListener("click", function(event) {
+
+  buttonTv.addEventListener("click", function(event) {
+      event.preventDefault();
+      console.log(textTv.value);
+  });
+
+  buttonMovie.addEventListener("click", function(event) {
     event.preventDefault();
-    console.log(textTv.value);
+    console.log(textMovie.value);
 });
-  
+
+
