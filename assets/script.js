@@ -7,18 +7,34 @@ var inputMovie = document.getElementById("movieInput");
 var buttonMovieElement = document.getElementById("submitMovie");
 var textMovie = document.getElementById("movieInput");
 
+let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+
 // API call function to retrieve TV show data
 function getTvShow(tvShow) {
     // Actual TV Show data API call URL
     let tvRequestUrl = "https://api.tvmaze.com/singlesearch/shows?q=" + tvShow;
+    console.log(tvRequestUrl)
     fetch(tvRequestUrl)
     .then(function (response) {
-      var showName = response
-      console.log(showName)
+      return response.json();
+    })
+    .then(function(data){
+      console.log(data)
+      var name = data.name
+      var image = data.image.medium
+      var scheduledays = data.schedule.days
+      var scheduletime = data.schedule.time
+      var showsite = data.officialSite
 
+      
 
-    });
-  };
+      console.log("Show Name: "+name)
+      console.log(image)
+      console.log("On TV: "+scheduledays+" at "+scheduletime)
+      console.log("Official site: "+showsite)
+    })
+    
+ };
 
 // API call function to retrieve Movie data
 function getMovie(movie) {
