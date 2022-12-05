@@ -7,6 +7,15 @@ var inputMovie = document.getElementById("movieInput");
 var buttonMovieElement = document.getElementById("submitMovie");
 var textMovie = document.getElementById("movieInput");
 
+var tvShowNameElement = document.getElementById("showName");
+var tvShowScheduleElement = document.getElementById("showSchedule");
+var tvShowPictureElement = document.getElementById("tvPic")
+
+
+
+
+
+
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 // API call function to retrieve TV show data
@@ -21,10 +30,16 @@ function getTvShow(tvShow) {
     .then(function(data){
       console.log(data)
       var name = data.name
+      var showsite = data.officialSite
       var image = data.image.medium
       var scheduledays = data.schedule.days
       var scheduletime = data.schedule.time
-      var showsite = data.officialSite
+
+
+      tvShowNameElement.innerHTML = "<a href="+""+showsite+""+">"+name+"</a>";
+      tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
+      tvShowScheduleElement.innerHTML = "Schedule: "+scheduledays+" at "+scheduletime;
+
 
       
 
