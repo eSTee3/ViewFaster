@@ -51,8 +51,7 @@ function getTvShow(tvShow) {
       console.log("On TV: "+scheduledays+" at "+scheduletime)
       console.log("Official site: "+showsite)
     })
-    
- };
+};
 
 // API call function to retrieve Movie data
 function getMovie(movie) {
@@ -70,10 +69,7 @@ function getMovie(movie) {
       var movieImdbId = data.title_results[0].imdb_id
       var movieYear = data.title_results[0].year
 
-      movieNameElement.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  ("+movieYear+")</a>";
-
-
-
+      movieNameElement.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  (Released: "+movieYear+")</a>";
     })
   };
 
