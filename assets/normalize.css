@@ -18,6 +18,7 @@
   
   body {
     margin: 0;
+    background-color: rgb(85, 18, 18);
   }
   
   /* HTML5 display definitions
@@ -45,6 +46,16 @@
   summary {
     display: block;
   }
+  
+  .rowTv {
+    float: left;
+    max-width: 50%;
+  }
+  .rowMovie{
+    float: left;
+    max-width: 50%;
+  }
+
   
   /**
    * 1. Correct `inline-block` display not defined in IE 8/9.
@@ -397,7 +408,7 @@
    */
   
   textarea {
-    overflow: auto;
+    text-overflow: inherit;
   }
   
   /**
