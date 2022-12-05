@@ -95,7 +95,7 @@
     line-height: 1.6;
     font-weight: 400;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #222; }
+    color: rgb(199, 173, 26); }
   
   
   /* Typography
@@ -128,9 +128,9 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: #1EAEDB; }
+    color: rgb(199, 173, 26; }
   a:hover {
-    color: #0FA0CE; }
+    color: rgb(199, 173, 26; }
   
   
   /* Buttons
@@ -143,7 +143,7 @@
     display: inline-block;
     height: 38px;
     padding: 0 30px;
-    color: #555;
+    color: rgb(199, 173, 26;
     text-align: center;
     font-size: 11px;
     font-weight: 600;
