@@ -11,6 +11,9 @@ var tvShowNameElement = document.getElementById("showName");
 var tvShowScheduleElement = document.getElementById("showSchedule");
 var tvShowPictureElement = document.getElementById("tvPic")
 
+var movieNameElement = document.getElementById("movieName")
+var movieYearElement = document.getElementById("movieYear")
+
 
 
 
@@ -35,10 +38,10 @@ function getTvShow(tvShow) {
       var scheduledays = data.schedule.days
       var scheduletime = data.schedule.time
 
-
-      tvShowNameElement.innerHTML = "<a href="+""+showsite+""+">"+name+"</a>";
+      // 
+      tvShowNameElement.innerHTML = "<a style=color:red href="+""+showsite+""+">"+name+"</a>";
       tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
-      tvShowScheduleElement.innerHTML = "Schedule: "+scheduledays+" at "+scheduletime;
+      tvShowScheduleElement.innerHTML = "Upcoming Schedule: "+scheduledays+" at "+scheduletime;
 
 
       
@@ -56,13 +59,22 @@ function getMovie(movie) {
     // Actual Movie data API call URL
     let movieRequestUrl = "https://api.watchmode.com/v1/search/?apiKey=" + keyMovie + "&search_field=name&search_value=" + movie;
 
+    // TODO: Figure out how to show all movies that match search
     fetch(movieRequestUrl)
     .then(function (response) {
-      var movieName = response
-      console.log(movieName)
+      return response.json();
+    })
+    .then(function(data){
+      console.log(data)
+      var movieTitle = data.title_results[0].name
+      var movieImdbId = data.title_results[0].imdb_id
+      var movieYear = data.title_results[0].year
+
+      movieNameElement.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  ("+movieYear+")</a>";
 
 
-    });
+
+    })
   };
 
 // Search for TV Show
