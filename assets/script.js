@@ -65,13 +65,20 @@ function getMovie(movie) {
     })
     .then(function(data){
       console.log(data)
-      var movieTitle = data.title_results[0].name
-      var movieImdbId = data.title_results[0].imdb_id
-      var movieYear = data.title_results[0].year
+      let results = data.title_results
+      for (let i= 0; i< results.length; i++) {
+      
+        var movieTitle = results[i].name
+        var movieImdbId = results[i].imdb_id
+        var movieYear = results[i].year
 
-      movieNameElement.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  (Released: "+movieYear+")</a>";
-    })
-  };
+        let movieItem = document.createElement("li")
+        movieItem.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  (Released: "+movieYear+")</a>"
+  
+        movieNameElement.append(movieItem)      
+      };
+    }
+    )};
 
 // Search for TV Show
 buttonTvElement.addEventListener("click", function() {
@@ -82,6 +89,7 @@ buttonTvElement.addEventListener("click", function() {
   });
 
 // Search for Movie
+// TODO: Add ability to see search history (with option to clear history)
 buttonMovieElement.addEventListener("click", function() {
   event.preventDefault()
     var movie = inputMovie.value;
