@@ -7,6 +7,18 @@ var inputMovie = document.getElementById("movieInput");
 var buttonMovieElement = document.getElementById("submitMovie");
 var textMovie = document.getElementById("movieInput");
 
+var tvShowNameElement = document.getElementById("showName");
+var tvShowScheduleElement = document.getElementById("showSchedule");
+var tvShowPictureElement = document.getElementById("tvPic")
+
+var movieNameElement = document.getElementById("movieName")
+var movieYearElement = document.getElementById("movieYear")
+
+
+
+
+
+
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 // API call function to retrieve TV show data
@@ -21,10 +33,16 @@ function getTvShow(tvShow) {
     .then(function(data){
       console.log(data)
       var name = data.name
+      var showsite = data.officialSite
       var image = data.image.medium
       var scheduledays = data.schedule.days
       var scheduletime = data.schedule.time
-      var showsite = data.officialSite
+
+      // 
+      tvShowNameElement.innerHTML = "<a style=color:red href="+""+showsite+""+">"+name+"</a>";
+      tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
+      tvShowScheduleElement.innerHTML = "Upcoming Schedule: "+scheduledays+" at "+scheduletime;
+
 
       
 
@@ -33,22 +51,34 @@ function getTvShow(tvShow) {
       console.log("On TV: "+scheduledays+" at "+scheduletime)
       console.log("Official site: "+showsite)
     })
-    
- };
+};
 
 // API call function to retrieve Movie data
 function getMovie(movie) {
     // Actual Movie data API call URL
     let movieRequestUrl = "https://api.watchmode.com/v1/search/?apiKey=" + keyMovie + "&search_field=name&search_value=" + movie;
 
+    // TODO: Figure out how to show all movies that match search
     fetch(movieRequestUrl)
     .then(function (response) {
-      var movieName = response
-      console.log(movieName)
+      return response.json();
+    })
+    .then(function(data){
+      console.log(data)
+      let results = data.title_results
+      for (let i= 0; i< results.length; i++) {
+      
+        var movieTitle = results[i].name
+        var movieImdbId = results[i].imdb_id
+        var movieYear = results[i].year
 
-
-    });
-  };
+        let movieItem = document.createElement("li")
+        movieItem.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  (Released: "+movieYear+")</a>"
+  
+        movieNameElement.append(movieItem)      
+      };
+    }
+    )};
 
 // Search for TV Show
 buttonTvElement.addEventListener("click", function() {
@@ -59,6 +89,7 @@ buttonTvElement.addEventListener("click", function() {
   });
 
 // Search for Movie
+// TODO: Add ability to see search history (with option to clear history)
 buttonMovieElement.addEventListener("click", function() {
   event.preventDefault()
     var movie = inputMovie.value;

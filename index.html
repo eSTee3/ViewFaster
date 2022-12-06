@@ -7,29 +7,45 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./assets/skeleton.css">
-    <title>ViewFaster</title>
+    <title>🎬 ViewFaster 🍿</title>
 </head>
 <body>
     <form>
-        <div class="rowTv">
+        <div class="column">
           <div class="innerTv">
             <label for="exampleTvInput">Search TV Shows</label>
-            <input class="u-full-width" type="search" placeholder="Show Name" id="tvInput">
+            <input class="u-full-width" type="search" placeholder="Enter Show Name" id="tvInput">
           </div>
-        <input class="button-primary" type="submit" value="Submit" id="submitTv">
+        <input class="button-primary" type="submit" value="Search TV Show" id="submitTv">
       </form>
+
+      <div class="row mr-0">
+        <div>
+            <div class="card-body">
+                <h3 id="showName"></h3>
+                <p id="tvPic"></p>
+                <h5 id="showSchedule"></h5>
+            </div>
+        </div>
+      </div>
+
       <div id="myData"></div>
         <div class="rowMovie">
           <div class="innerMovie">
             <label for="exampleEmailInput">Search Movies</label>
-
-            <input class="u-full-width" type="search" placeholder="Movie Name" id="exampleMovieInput">
-
-            <input class="u-full-width" type="text" placeholder="Movie Name" id="movieInput">
-
+            <input class="u-full-width" type="search" placeholder="Enter Movie Name" id="movieInput">
           </div>
-        <input class="button-primary" type="submit" id="submitMovie" value="Submit">
+        <input class="button-primary" type="submit" id="submitMovie" value="Search Movie">
       </form>
+
+      <div class="row mr-0">
+        <div class="column">
+            <div class="card-body">
+                <ol id="movieName"></ol>
+            </div>
+        </div>
+      </div>
+
     <script src="./assets/script.js"></script>
 </body>
 </html>
