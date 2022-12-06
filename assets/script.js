@@ -38,11 +38,15 @@ function getTvShow(tvShow) {
       var scheduledays = data.schedule.days
       var scheduletime = data.schedule.time
 
-      // 
+      if (showsite != null) {
       tvShowNameElement.innerHTML = "<a style=color:red href="+""+showsite+""+">"+name+"</a>";
       tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
       tvShowScheduleElement.innerHTML = "Upcoming Schedule: "+scheduledays+" at "+scheduletime;
-
+      }else {
+      tvShowNameElement.innerHTML = name;
+      tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
+      tvShowScheduleElement.innerHTML = "Upcoming Schedule: "+scheduledays+" at "+scheduletime;
+      }
 
       
 
@@ -66,15 +70,16 @@ function getMovie(movie) {
     .then(function(data){
       console.log(data)
       let results = data.title_results
-      for (let i= 0; i< results.length; i++) {
+      movieNameElement.innerHTML = ""
+      for (let i= 0; i< 5; i++) {
       
         var movieTitle = results[i].name
         var movieImdbId = results[i].imdb_id
         var movieYear = results[i].year
+        var movieType = results[i].type
 
-        let movieItem = document.createElement("li")
-        movieItem.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+movieTitle+"  (Released: "+movieYear+")</a>"
-  
+      let movieItem = document.createElement("li")
+        movieItem.innerHTML = "<a style=color:red href="+""+"https://www.imdb.com/title/"+movieImdbId+""+">"+ movieType.toUpperCase() +": "+movieTitle+"  [Released: "+movieYear+"]</a>"  
         movieNameElement.append(movieItem)      
       };
     }

@@ -1,4 +1,9 @@
 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: top;
+    gap: 300px;
     position: relative;
     width: 100%;
     max-width: 960px;
@@ -128,9 +133,9 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: rgb(199, 173, 26; }
+    color: rgb(199, 173, 26); }
   a:hover {
-    color: rgb(199, 173, 26; }
+    color: rgb(199, 173, 26); }
   
   
   /* Buttons
@@ -143,7 +148,7 @@
     display: inline-block;
     height: 38px;
     padding: 0 30px;
-    color: rgb(199, 173, 26;
+    color: rgb(199, 173, 26);
     text-align: center;
     font-size: 11px;
     font-weight: 600;
@@ -176,8 +181,8 @@
   input[type="reset"].button-primary,
   input[type="button"].button-primary {
     color: #FFF;
-    background-color: #33C3F0;
-    border-color: #33C3F0; }
+    background-color: #7e1919;
+    border-color: #9b7220; }
   .button.button-primary:hover,
   button.button-primary:hover,
   input[type="submit"].button-primary:hover,
@@ -358,7 +363,7 @@
   .row:after,
   .u-cf {
     content: "";
-    display: table;
+    /* display: table; */
     clear: both; }
   
   
