@@ -1,0 +1,37 @@
+#formTv {
+    border: 10px;
+    border-color: #9b7220;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#formMovie {
+    border: 10px;
+    border-color: #9b7220;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#header {
+    text-align: center;
+}
+
+#tvInput {
+    width: 100%;
+}
+
+#movieInput {
+    width: 100%;
+}
+
+#submitTv {
+    width: 100%;
+}
+
+#submitMovie {
+    width: 100%;
+}
+
+#logo {
+    width: 100%;
+}
