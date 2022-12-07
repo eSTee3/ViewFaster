@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./assets/normalize.css">
-    <link rel="stylesheet" href="./assets/skeleton.css">
-    <title>🎬 ViewFaster 🍿</title>
-</head>
-<body>
-    <form>
-        <div class="column">
-          <div class="innerTv">
-            <label for="exampleTvInput">Search TV Shows</label>
-            <input class="u-full-width" type="search" placeholder="Enter Show Name" id="tvInput">
-          </div>
-        <input class="button-primary" type="submit" value="Search TV Show" id="submitTv">
-      </form>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="./assets/normalize.css">
+      <link rel="stylesheet" href="./assets/skeleton.css">
+      <link rel="stylesheet" href="./assets/style.css">
+      <title>🎬 ViewFaster 🍿</title>
+  </head>
 
+  <body>
+  <!-- TV Show Search area -->
+    <form id="formTv" style="border-style:double">
+      <div class="rowTV"></div>
+        <div class="innerTv">
+          <label for="exampleTvInput">Search TV Shows</label>
+
+          <!-- TV Show Search FIELD -->
+          <input class="u-full-width" type="search" placeholder="Enter Show Name" id="tvInput">
+        </div>
+
+      <!-- TV Show Search BUTTON -->
+      <input class="button button-primary" type="submit" value="Search TV Show" id="submitTv">
+
+      <!-- TV Show Search RESULTS -->
       <div class="row mr-0">
         <div>
             <div class="card-body">
-                <h3 id="showName"></h3>
+                <h3 class="u-full-width" id="showName"></h3>
                 <p id="tvPic"></p>
                 <h5 id="showSchedule"></h5>
             </div>
         </div>
       </div>
+    </form>
 
-      <div id="myData"></div>
-        <div class="rowMovie">
-          <div class="innerMovie">
-            <label for="exampleEmailInput">Search Movies</label>
-            <input class="u-full-width" type="search" placeholder="Enter Movie Name" id="movieInput">
-          </div>
-        <input class="button-primary" type="submit" id="submitMovie" value="Search Movie">
-      </form>
 
+        
+  <!-- Movie Show Search area -->
+    <form id="formMovie" style="border-style:double">
+      <div class="rowMovie"></div>
+        <div class="innerMovie">
+          <label for="exampleEmailInput">Search Movies</label>
+
+          <!-- Movie Search FIELD -->
+          <input class="u-full-width" type="search" placeholder="Enter Movie Name" id="movieInput">
+        </div>
+
+        <!-- Movie Show Search BUTTON -->
+        <input class="button button-primary" type="submit"  value="Search Movie" id="submitMovie">
+    
+      <!-- Movie Search RESULTS -->
       <div class="row mr-0">
-        <div class="column">
+        <div>
             <div class="card-body">
                 <ol id="movieName"></ol>
             </div>
         </div>
       </div>
+    </form>
 
-    <script src="./assets/script.js"></script>
-</body>
+      <!-- Company Logo -->
+      <img id="logo" src="./assets/viewfaster-low-resolution-logo-color-on-transparent-background.png">
+
+      <script src="./assets/script.js"></script>
+  </body>
 </html>
