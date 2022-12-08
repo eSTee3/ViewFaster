@@ -1,3 +1,8 @@
+.centerEl {
+    display: flex;
+    justify-content: center;
+}
+
 #formTv {
     border: 10px;
     border-color: #ae7e1e;
@@ -39,47 +44,8 @@
     width: 100%;
 }
 
-#logo {
-    width: 100%;
-}
-
-#tvPic {
-    width: 10%;
-}
-=======
-#tvForm {
-    margin-right: 270px;
-}
-#formTv {
-    border: 5px;
-    border-color: #9b7220;
-    border-radius: 20px;
-    padding: 15px;
-}
-#formMovie {
-    border: 5px;
-    border-color: #9b7220;
-    border-radius: 20px;
-    padding: 15px;
-}
-
-#header {
-    text-align: center;
-}
-
-#tvInput {
-    width: 100%;
-}
-
-#movieInput {
-    width: 100%;
-
-}
-
-#submitMovie {
-    width: 100%;
-}
-
-#movieName {
-    width: 50px;
+#deleteBox {
+    display: flex;
+    justify-content: right;
+    float: right;
 }
