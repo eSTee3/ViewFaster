@@ -62,7 +62,6 @@ function getMovie(movie) {
     // Actual Movie data API call URL
     let movieRequestUrl = "https://api.watchmode.com/v1/search/?apiKey=" + keyMovie + "&search_field=name&search_value=" + movie;
 
-    // TODO: Figure out how to show all movies that match search
     fetch(movieRequestUrl)
     .then(function (response) {
       return response.json();
@@ -94,7 +93,6 @@ buttonTvElement.addEventListener("click", function() {
   });
 
 // Search for Movie
-// TODO: Add ability to see search history (with option to clear history)
 buttonMovieElement.addEventListener("click", function() {
   event.preventDefault()
     var movie = inputMovie.value;

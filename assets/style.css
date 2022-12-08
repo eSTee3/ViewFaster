@@ -1,3 +1,52 @@
+#formTv {
+    border: 10px;
+    border-color: #ae7e1e;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#title {
+    color: #ae7e1e;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#formMovie {
+    border: 10px;
+    border-color: #ae7e1e;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#header {
+    text-align: center;
+}
+
+#tvInput {
+    width: 100%;
+}
+
+#movieInput {
+    width: 100%;
+}
+
+#submitTv {
+    width: 100%;
+}
+
+#submitMovie {
+    width: 100%;
+}
+
+#logo {
+    width: 100%;
+}
+
+#tvPic {
+    width: 10%;
+}
+=======
 #tvForm {
     margin-right: 270px;
 }
@@ -34,4 +83,3 @@
 #movieName {
     width: 50px;
 }
-
