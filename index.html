@@ -10,6 +10,28 @@
       <link rel="stylesheet" href="./assets/style.css">
       <title>🎬 ViewFaster 🍿</title>
   </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./assets/skeleton.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>🎬 ViewFaster 🍿</title>
+</head>
+<body>
+    <header id="header">
+        <h1>🎬 ViewFaster 🍿</h1>
+    </header>
+    <div class="container" id="tvForm">
+    <form id="formTv" style="border-style:double">
+        <div class="column">
+          <div class="innerTv">
+            <label for="exampleTvInput">Search TV Shows</label>
+            <input class="u-full-width" type="search" placeholder="Enter Show Name" id="tvInput">
+          </div>
+        <input class="button button-primary" type="submit" value="Search TV Show" id="submitTv">
 
   <body>
     <h2 id="title">ViewFaster</h2>
@@ -45,6 +67,16 @@
       <div class="rowMovie"></div>
         <div class="innerMovie">
           <label for="exampleEmailInput">Search Movies</label>
+      </div>
+      <div class="container" id="movieForm">
+      <form id="formMovie" style="border-style:double">
+        <div class="rowMovie"></div>
+          <div class="innerMovie">
+            <label for="exampleEmailInput">Search Movies</label>
+            <input class="u-full-width" type="search" placeholder="Enter Movie Name" id="movieInput">
+          </div>
+        <input class="button-primary" type="submit" id="submitMovie" value="Search Movie">
+     
 
           <!-- Movie Search FIELD -->
           <input class="u-full-width" type="search" placeholder="Enter Movie Name" id="movieInput">
@@ -63,9 +95,15 @@
       </div>
     </form>
 
+
       <!-- Company Logo -->
       <img id="logo" src="./assets/viewfaster-low-resolution-logo-color-on-transparent-background.png">
 
       <script src="./assets/script.js"></script>
   </body>
+
+      </div>
+    <script src="./assets/script.js"></script>
+</body>
+
 </html>
