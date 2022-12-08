@@ -47,7 +47,7 @@ function getTvShow(tvShow) {
       tvShowPictureElement.innerHTML = "<img src="+""+image+""+" alt="+""+name+""+">";
       tvShowScheduleElement.innerHTML = "Upcoming Schedule: "+scheduledays+" at "+scheduletime;
       }
-
+      
       
 
       console.log("Show Name: "+name)
@@ -84,13 +84,26 @@ function getMovie(movie) {
     }
     )};
 
+var clearButton = document.getElementById("clearSearch")
+
+clearButton.addEventListener("click", function() {
+  tvShowNameElement.innerHTML = "";
+  tvShowPictureElement.innerHTML = "";
+  tvShowScheduleElement.innerHTML = "";
+})
+
+
+
 // Search for TV Show
 buttonTvElement.addEventListener("click", function() {
   event.preventDefault()
     var tvShow = inputTv.value;
     getTvShow(tvShow);
+    searchHistory.push(tvShow);
+    localStorage.setItem("tvSearch", JSON.stringify(searchHistory));
     console.log(tvShow);
   });
+
 
 // Search for Movie
 buttonMovieElement.addEventListener("click", function() {
@@ -98,4 +111,4 @@ buttonMovieElement.addEventListener("click", function() {
     var movie = inputMovie.value;
     getMovie(movie);
     console.log(movie);
-  });
+  })
