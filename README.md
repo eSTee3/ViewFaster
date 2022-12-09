@@ -12,7 +12,7 @@ Our website is used for guests to view guided schedules/workable online links fo
 ## Application Features
 - Auto-fit width of all sections, including our company logo
 - Saves all searches within local storage according to the search field used (TV vs. Movie)
-- All proceeding searches will auto-clear the current search so that concatenation does not ocurr, leading to a cleaner experience
+- All proceeding searches will auto-clear the current search so that concatenation does not occur, leading to a cleaner experience
 - Search results will provide official links to the shows/movies that are returned within the results, providing a more in-depth way to decide on your media consumption needs
 - Specific to TV Show searches: The upcoming days and times for when it will air, are provided to the end user
 
