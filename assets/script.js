@@ -38,6 +38,9 @@ function getTvShow(tvShow) {
       var image = data.image.medium
       var scheduledays = data.schedule.days
       var scheduletime = data.schedule.time
+      tvShowNameElement.style.display = "flex"
+      tvShowScheduleElement.style.display = "flex"
+      tvShowPictureElement.style.display = "flex"
 
       if (showsite != null) {
       tvShowNameElement.innerHTML = "<a style=color:red href="+""+showsite+""+">"+name+"</a>";

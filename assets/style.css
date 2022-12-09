@@ -1,6 +1,10 @@
 .centerEl {
-    display: flex;
+    display: none;
     justify-content: center;
+}
+
+#movieName {
+    display: none;
 }
 
 #formTv {
@@ -8,6 +12,8 @@
     border-color: #ae7e1e;
     border-radius: 20px;
     padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #title {
@@ -22,6 +28,8 @@
     border-color: #ae7e1e;
     border-radius: 20px;
     padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #header {
