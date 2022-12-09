@@ -73,9 +73,16 @@ function getMovie(movie) {
     .then(function(data){
       console.log(data)
       let results = data.title_results
+
+      console.log(results)
+
+      movieNameElement.style.display = "block"
+
+
       movieNameElement.innerHTML = ""
-      for (let i= 0; i< 15; i++) {
+      for (let i= 0; i< 5; i++) {
       
+        console.log(results[i].name)
         var movieTitle = results[i].name
         var movieImdbId = results[i].imdb_id
         var movieYear = results[i].year

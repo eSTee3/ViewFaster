@@ -32,16 +32,17 @@
     margin-left: 10px;
 }
 
-#header {
+input {
+    text-align: center;
+    width: 100%; 
+}
+
+input::placeholder {
     text-align: center;
 }
 
-#tvInput {
-    width: 100%;
-}
-
-#movieInput {
-    width: 100%;
+#header {
+    text-align: center;
 }
 
 #submitTv {
