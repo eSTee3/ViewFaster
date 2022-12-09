@@ -49,3 +49,7 @@
     justify-content: right;
     float: right;
 }
+
+#logo {
+   width: 100%; 
+}
