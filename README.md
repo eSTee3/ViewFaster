@@ -4,7 +4,7 @@
 Our website is used for guests to view guided schedules/workable online links for movie and television media for the present and the past using secondary API’s through IMDB and TVMaze. A huge proponent of our development is ease of use and remembrance: both visually and client side. There’s nothing like getting excited for a specific piece of media and then scouring each individual streaming service trying to find where it can be found and/or how many doubloons it’ll cost me. Motivation can be boiled down to the name we gave this project: ViewFaster. At your fingertips you can find tens of thousands of media titles and view them as promptly as you can type.
 
 ## Usage
-1. Navigate to the [application](https://estee3.github.io/1st-Project/)
+1. Navigate to the [application](https://estee3.github.io/ViewFaster/)
 2. Enter part or all of a TV show and/or a Movie name
 3. Click on the appropriate search button to execute the API call
 4. Use the results to plan your media consumption needs
@@ -12,7 +12,7 @@ Our website is used for guests to view guided schedules/workable online links fo
 ## Application Features
 - Auto-fit width of all sections, including our company logo
 - Saves all searches within local storage according to the search field used (TV vs. Movie)
-- All proceeding searches will auto-clear the current search so that concatenation does not ocurr, leading to a cleaner experience
+- All proceeding searches will auto-clear the current search so that concatenation does not occur, leading to a cleaner experience
 - Search results will provide official links to the shows/movies that are returned within the results, providing a more in-depth way to decide on your media consumption needs
 - Specific to TV Show searches: The upcoming days and times for when it will air, are provided to the end user
 
@@ -41,7 +41,7 @@ Our website is used for guests to view guided schedules/workable online links fo
 
 ### API: TV Maze (TV Shows)
 - [Link to Documentation](https://www.tvmaze.com/api)
-- [Example API Call]( https://api.tvmaze.com/search/shows)
+- [Example API Call](https://api.tvmaze.com/search/shows)
 
 ### API: Watchmode (Movies)
 - [Link to Documentation](https://api.watchmode.com/docs/)
