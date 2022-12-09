@@ -48,7 +48,7 @@ Our website is used for guests to view guided schedules/workable online links fo
 - [Example API Call](https://api.watchmode.com/v1/search/?apiKey=kjG2rO76NTk8hjFjwsfFxxe205z2J4Fd2ZFn66nA&search_field=name&search_value=Ed%20Wood)
 
 # Application Presentation Slide Deck
-
+![alt text](./assets/Presentation.gif)
 
 # License
 
