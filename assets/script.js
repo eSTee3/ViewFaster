@@ -19,7 +19,8 @@ var movieYearElement = document.getElementById("movieYear")
 
 
 
-let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+let tvsearchHistory = JSON.parse(localStorage.getItem("search")) || [];
+let moviesearchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 // API call function to retrieve TV show data
 function getTvShow(tvShow) {
@@ -70,7 +71,7 @@ function getMovie(movie) {
       console.log(data)
       let results = data.title_results
       movieNameElement.innerHTML = ""
-      for (let i= 0; i< 5; i++) {
+      for (let i= 0; i< 15; i++) {
       
         var movieTitle = results[i].name
         var movieImdbId = results[i].imdb_id
@@ -84,13 +85,6 @@ function getMovie(movie) {
     }
     )};
 
-var clearButton = document.getElementById("clearSearch")
-
-clearButton.addEventListener("click", function() {
-  tvShowNameElement.innerHTML = "";
-  tvShowPictureElement.innerHTML = "";
-  tvShowScheduleElement.innerHTML = "";
-})
 
 
 
@@ -99,16 +93,24 @@ buttonTvElement.addEventListener("click", function() {
   event.preventDefault()
     var tvShow = inputTv.value;
     getTvShow(tvShow);
-    searchHistory.push(tvShow);
-    localStorage.setItem("tvSearch", JSON.stringify(searchHistory));
+    tvsearchHistory.push(tvShow);
+    localStorage.setItem("tvSearch", JSON.stringify(tvsearchHistory));
     console.log(tvShow);
-  });
+    var i;
 
+    console.log("local storage");
+    for (i = 0; i < localStorage.length; i++)   {
+        console.log(localStorage.getItem(localStorage.key(i)));
+    }
+
+  });
 
 // Search for Movie
 buttonMovieElement.addEventListener("click", function() {
   event.preventDefault()
     var movie = inputMovie.value;
     getMovie(movie);
+    moviesearchHistory.push(movie);
+    localStorage.setItem("movieSearch", JSON.stringify(moviesearchHistory));
     console.log(movie);
-  })
+  });
